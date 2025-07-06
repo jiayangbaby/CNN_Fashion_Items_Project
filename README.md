@@ -1,5 +1,5 @@
 Fashion Image Classifier – End-to-End Deep Learning Pipeline
-This repository presents an end-to-end image classification system for fashion items, originally based on the Fashion MNIST dataset. The project started from the tutorial here, but has since been significantly extended to improve both model performance and system design.
+This repository presents an end-to-end image classification system for fashion items, originally based on the Fashion MNIST dataset. The project started from the tutorial here: https://www.youtube.com/watch?v=sb2tm3pu17k&t=3196s, but has since been extended to improve both model performance and system design.
 
 Project Summary:
 1. A custom-trained CNN model that supports colored, high-resolution images.
@@ -29,5 +29,5 @@ Future Work:
 Model retraining loop based on user feedback
 
 Acknowledgment:
-This project builds on the tutorial by CodeBasics (video), and expands it into a scalable, full-stack ML system with production-level capabilities.
+This project builds on the tutorial by Siddhardhan (video), and expands it into a scalable, full-stack ML system with production-level capabilities.
 
