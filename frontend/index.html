@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header Section -->
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Vue 3 CDN -->
+  <script src="https://unpkg.com/vue@3"></script>
+ 
+</head>
+
+<!-- Main Content Section -->
+<body class="h-screen w-screen bg-gradient-to-b from-gray-100 to-white flex items-center justify-center">
+  <div id="app" class="bg-white shadow-lg rounded-2xl p-10 w-full max-w-xl space-y-6 border border-gray-200">
+  
+    <!-- Title on the website -->
+    <h2 class="text-3xl font-extrabold text-gray-800 text-center flex items-center justify-center gap-2">
+      🧠 Fashion Item Classifier
+    </h2>
+    <!-- Input type & predict button on the website -->
+    <input type="file"
+            @change="handleFileUpload"
+            accept="image/*"
+            class="block w-full text-lg text-gray-700 border border-gray-300 rounded-lg p-3"/>
+
+    <button @click="predictImage"
+            :disabled="!selectedFile || loading"
+            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg w-full text-lg disabled:bg-gray-300">
+      {{ loading ? "Predicting..." : "Predict" }}
+    </button>
+    <!-- Prediction Results on the website -->
+    <div v-if="prediction" class="text-center space-y-1">
+      <p class="text-xl font-semibold text-green-700">✅ {{ prediction.predicted_class }}</p>
+      <p class="text-base text-gray-600">🎯 Confidence: {{ (prediction.confidence * 100).toFixed(2) }}%</p>
+      </div>
+
+      <div v-if="error" class="text-red-600 text-center text-base font-medium">
+        {{ error }}
+      </div>
+
+    </div>
+  </div>
+  <script src="front_app.js"></script>
+</body>
+
+
+</html>

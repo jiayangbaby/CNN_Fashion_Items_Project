@@ -1,0 +1,23 @@
+# Base image
+FROM python:3.10-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy backend (Flask API)
+COPY app/ app/
+
+# Copy frontend (HTML + Vue + CSS)
+COPY frontend/ frontend/
+
+# Copy requirements
+COPY app/requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port Flask runs on
+EXPOSE 8501
+
+# Set entrypoint
+CMD ["python", "app/main_flask.py"]
