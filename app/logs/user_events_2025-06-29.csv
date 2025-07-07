@@ -1,0 +1,3 @@
+filename,predicted_class,confidence,server_timestamp
+fashion_mnist_1.png,Ankle boot,0.6060130000114441,2025-06-29T21:55:39.486475+00:00
+predict_clicked,fashion_mnist_1.png,Ankle boot,0.6060130000114441,2025-06-29T21:55:42.062Z,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",2025-06-29T21:55:42.082369+00:00
